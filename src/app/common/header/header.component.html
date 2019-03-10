@@ -1,0 +1,46 @@
+
+	<div class="container-fluid">
+		  <div>
+	<nav class="navbar navbar-expand-lg navbar-dark">
+    	<header class="header">
+			<div class="row">
+			    <h3 class="header-align text-light navbar-header">Music Hub</h3>
+			</div>
+		</header>
+		<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    	<a class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</a>
+			
+		 <div class="collapse navbar-collapse" id="navbarsExample05">
+		  	<ul class="navbar navbar-nav mr-auto">
+		  		<li class="nav-item active">
+					<a class="p-2 text-light nav-link" mat-button routerLink="home" (click)="onMenuClick()" routerLinkActive="active"><b>Home</b></a>
+	     		</li>
+	     		<li class="nav-item">
+	     		 	<a class="p-2 text-light nav-link" (click)="onMenuClick()" mat-button routerLink="latestmusic" routerLinkActive="active" *ngIf="token"><b>Latest Music</b></a>
+	      		</li>	
+			    <li class="nav-item">
+			      <a (click)="onMenuClick()" class="p-2 text-light nav-link" mat-button routerLink="myfavmusic" routerLinkActive="active" *ngIf="token"><b>My Favourite</b></a>
+			    </li>
+			    <li class="nav-item">
+			      	<a (click)="onMenuClick()" class="p-2 text-light nav-link" mat-button routerLink="artist" routerLinkActive="active" *ngIf="token"><b>Artist Playlist</b></a>
+			    </li>
+			    <li class="nav-item">
+			      	<a (click)="onMenuClick()" class="p-2 text-light nav-link" mat-button routerLink="genre" routerLinkActive="active" *ngIf="token"><b>Genre Playlist</b></a>
+			    </li>
+			</ul>
+		</div>
+	    <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			<div fxLayout="row" fxLayoutGap="5px">
+				<input #search type="text" placeholder="Search.." name="search" (keyup.enter)="lookForQuery(search)" routerLink="search">
+				<button mat-button type="submit" (click)="lookForQuery(search)" routerLink="search"><i class="fa fa-search"></i></button>
+			</div>
+		<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	    <h4 *ngIf="username">Hello, {{username}}</h4>
+		<button mat-button (click)="openLoginForm()" *ngIf="!token">Login</button>
+		<button mat-button *ngIf="token" (click)="logoutForm()"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</button>
+    </nav>
+</div>
+<br/>
+</div>

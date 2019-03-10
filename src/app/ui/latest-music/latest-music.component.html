@@ -1,0 +1,36 @@
+<br/><br/>
+<div class="container-fluid" *ngIf="latest_music">
+	<div class="row">
+	<mat-card *ngFor="let music of latest_music; let i=index" [ngClass]="{'active': selected_index == i}">
+		<div class="column"><a href="{{music.external_urls.spotify}}" target="_blank"><span class="roll"></span><img mat-card-image src="{{music.images[0].url}}" alt="Slow connection"></a></div>
+			<div class="column">
+			<mat-card-header>
+				<div class="row">
+					<h6>{{music.name}}</h6>
+					<span class="artist_name" *ngFor="let artist of music.artists">
+					<mat-card-subtitle>{{artist.name}} </mat-card-subtitle>
+					</span>	
+				</div>
+			</mat-card-header>
+		</div>
+		<br/>
+		<div class="column at_bottom">
+		<mat-card-actions class="card_action">
+			<span class="action">
+				<i (click)="playSong(this, i)" class="fa fa-play" aria-hidden="true"></i>
+			</span>
+			<span class="action">
+		    	<i (click)="like(this, i)" *ngIf="music.defined.flag" class="fa fa-heart-o"></i>
+		    	<i (click)="like(this, i)" *ngIf="!music.defined.flag" class="fa fa-heart full"></i>
+		    </span>
+		    <span class="action">
+		    	<i (click)="markAsFav(this,i)" *ngIf="music.defined.favourite" class="fa fa-star"></i>
+		    	<i (click)="markAsFav(this,i)" *ngIf="!music.defined.favourite" class="fa fa-star fav"></i>
+		    </span>
+		</mat-card-actions>
+	</div>
+		
+	</mat-card>
+</div>
+</div>
+

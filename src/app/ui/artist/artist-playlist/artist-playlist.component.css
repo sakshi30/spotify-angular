@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+ul { list-style-type: none; }
+
+ul li:before {    
+    font-family: 'FontAwesome';
+    content: '\f04b';
+    margin:0 10px 0 -20px;
+}
+li{
+  padding-right: 50%;
+}

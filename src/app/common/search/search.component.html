@@ -1,0 +1,41 @@
+<div *ngIf="flag">
+<br/><br/>
+<h1 class="top_music container"><b>Top Artists</b></h1>
+	 <div class="container-fluid" *ngIf="related_artist">
+	 	<div class="row">
+		<mat-card *ngFor="let artist of related_artist">
+			<div *ngIf="artist.images[0]">
+			<a (click)="getListOfTracks(artist.id, artist.images[1].url)" routerLink="../artist/player"><span class="roll"></span><img mat-card-image src="{{artist.images[0].url}}" alt="Slow connection"></a>
+			<div class="row">
+				<mat-card-header>
+					<div class="column">
+						<mat-card-title>{{artist.name}}</mat-card-title>
+					</div>	
+				</mat-card-header>
+			</div>
+		</div>
+		</mat-card>
+	</div>
+	</div>
+<br/><br/>
+<h1 class="top_music container"><b>Top Tracks</b></h1>
+	 <div class="container-fluid" *ngIf="related_tracks">
+	 	<div class="row">
+		<mat-card *ngFor="let artist of related_tracks">
+			<div *ngIf="artist.album.images[0]">
+			<a (click)="Play_song(artist.href)"><span class="roll"></span><img mat-card-image src="{{artist.album.images[0].url}}" alt="Slow connection"></a>
+			<div class="row">
+				<mat-card-header>
+					<div class="column">
+						<mat-card-title>{{artist.name}}</mat-card-title>
+					</div>	
+				</mat-card-header>
+			</div>
+		</div>
+		</mat-card>
+	</div>
+	</div>
+</div>
+<div *ngIf="!flag">
+	<h3 class="container">Hey fam, What are you looking for?</h3>
+</div>

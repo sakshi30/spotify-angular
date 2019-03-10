@@ -1,0 +1,12 @@
+<div class="container-fluid" *ngIf="music_playlist">
+	<mat-card *ngFor="let music of music_playlist">
+		<a (click)="displayTracks(music)" routerLink="./tracks"><span class="roll"></span><img mat-card-image src="{{music.images[0].url}}" alt="Slow connection"></a>
+		<div class="row">
+			<mat-card-header>
+				<div class="column">
+					<mat-card-title>{{music.name}}</mat-card-title>
+				</div>	
+			</mat-card-header>
+		</div>
+	</mat-card>
+</div>

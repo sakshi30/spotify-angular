@@ -1,0 +1,56 @@
+<div *ngIf="flag">
+ <br/><br/>
+ <h1 class="top_music container"><b>Recommended Playlists</b></h1>
+ <div class="container-fluid" *ngIf="recom_playlists">
+	<mat-card *ngFor="let recom of recom_playlists">
+		<a (click)="getPlaylist(recom.tracks.href, recom.images[0].url)" routerLink="./player"><span class="roll"></span><img mat-card-image src="{{recom.images[0].url}}" alt="Slow connection"></a>
+		<div class="row">
+			<mat-card-header>
+				<div class="column">
+					<mat-card-title>{{recom.name}}</mat-card-title>
+				</div>	
+			</mat-card-header>
+		</div>
+	</mat-card>
+</div>
+<br/><br/>
+ <h1 class="top_music container"><b>Top Albums of all time</b></h1>
+ <div class="container-fluid" *ngIf="top_albums">
+	<mat-card *ngFor="let top of top_albums">
+		<a (click)="getPlaylistOfAlbum(top.id, top.images[1].url)" routerLink="./player"><span class="roll"></span><img mat-card-image src="{{top.images[0].url}}" alt="Slow connection"></a>
+		<div class="row">
+			<mat-card-header>
+				<div class="column">
+					<mat-card-title>{{top.name}}</mat-card-title>
+				</div>	
+			</mat-card-header>
+		</div>
+	</mat-card>
+</div>
+<br/><br/>
+ <h1 class="top_music container"><b>My Favourite Albums</b></h1>
+ <div class="container-fluid" *ngIf="liked_albums">
+ 	<div class="row">
+	<mat-card *ngFor="let like of liked_albums">
+		<a (click)="getPlaylistOfAlbum(like.id, like.images[1].url)" routerLink="./player"><span class="roll"></span><img mat-card-image src="{{like.images[0].url}}" alt="Slow connection"></a>
+		<div class="row">
+			<mat-card-header>
+				<div class="column">
+					<mat-card-title>{{like.name}}</mat-card-title>
+				</div>	
+			</mat-card-header>
+		</div>
+	</mat-card>
+</div>
+</div>
+</div>
+<div *ngIf="!flag">
+	<img src="../../assets/not_log.jpg" width="1520px" height="800px">	
+	<div class="text-block">
+		<h1>Login to kill some time</h1>
+	</div>
+	<div class="other-text-block">
+		<h1>Bored much?</h1>
+	</div>
+</div>
+

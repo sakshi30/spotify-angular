@@ -1,0 +1,32 @@
+mat-card{
+	max-width: 270px;
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-left: 30px;
+	margin-top: 20px;
+	background-color: black;
+	color: white;
+}
+.full {
+  color: red;
+}
+
+.action{
+	padding-left: 50px;
+	padding-right: 20px;
+}
+.card_action{
+	text-align: center;
+}
+.artist_name{
+	display: inline-block;
+	margin-left: 10px;
+}
+.fav{
+	color: silver;
+}
+
+.at_bottom{
+	position: absolute;
+	bottom: 1px;
+}

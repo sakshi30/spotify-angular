@@ -1,0 +1,21 @@
+<div class="container">
+<div class="row">
+  <div class="col-lg-6 col-md-4 col-sm-8">
+  	<img src="{{image_url[0]}}" alt="Slow connection">
+  </div>
+  <div class="col-lg-6 col-md-8 col-sm-8">
+  	<ul *ngFor="let song of music_playlist">
+  		<span *ngIf="song.track">
+  			<h6><a (click)="Play_song(song.track.href)"><li>{{song.track.name}}</li></a></h6>
+  			<p>Album: {{song.track.album.name}}</p>
+  		</span>
+  		<span *ngIf="!song.track">
+  			<h6><a (click)="Play_song(song.href)"><li>{{song.name}}</li></a></h6>
+  			<p>Album: {{song.name}}</p>
+  		</span>
+  		
+  	</ul>
+  </div>
+</div>
+</div>
+

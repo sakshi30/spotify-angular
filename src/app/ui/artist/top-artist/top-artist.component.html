@@ -1,0 +1,16 @@
+<br/><br/>
+<h1 class="top_music container"><b>Top Artists</b></h1>
+	 <div class="container-fluid" *ngIf="all_artist">
+	 	<div class="row">
+		<mat-card *ngFor="let artist of all_artist">
+			<a (click)="getListOfTracks(artist.id, artist.images[1].url)" routerLink="./player"><span class="roll"></span><img mat-card-image src="{{artist.images[0].url}}" alt="Slow connection"></a>
+			<div class="row">
+				<mat-card-header>
+					<div class="column">
+						<mat-card-title>{{artist.name}}</mat-card-title>
+					</div>	
+				</mat-card-header>
+			</div>
+		</mat-card>
+	</div>
+	</div>

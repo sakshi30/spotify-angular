@@ -1,0 +1,40 @@
+img {
+    display: block;
+}
+
+.top_music{
+	font-size: 3em;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+mat-card{
+  max-width: 270px;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+}
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.other-text-block {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

@@ -1,0 +1,15 @@
+.header-align{
+	font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  	font-size: 2rem;
+}
+.navbar {
+  margin-bottom: 5px;
+}
+
+a{
+	font-size: 1.1rem;
+}
+a:hover{
+	background-color: white;
+	color: black;
+}

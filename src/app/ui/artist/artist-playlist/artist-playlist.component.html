@@ -1,0 +1,14 @@
+<div class="container">
+<div class="row">
+  <div class="col-lg-6 col-md-4 col-sm-4">
+  	<img src="{{image_url[0]}}" alt="Slow connection" width="300px" height="300px">
+  </div>
+  <div class="col-lg-6 col-md-8 col-sm-8">
+  	<ul *ngFor="let song of music_playlist">
+  		<h6><a (click)="Play_song(song.href)"><li>{{song.name}}</li></a></h6>
+  		<p>Album: {{song.album.name}}</p>
+  	</ul>
+  </div>
+</div>
+</div>
+

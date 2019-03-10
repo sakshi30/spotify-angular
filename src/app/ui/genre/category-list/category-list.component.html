@@ -1,0 +1,12 @@
+<div class="container-fluid" *ngIf="categories">
+	<mat-card *ngFor="let cat of categories">
+		<a (click)="getPlaylist(cat.href)" routerLink="./playlist"><span class="roll"></span><img mat-card-image src="{{cat.icons[0].url}}" alt="Slow connection"></a>
+		<div class="row">
+			<mat-card-header>
+				<div class="column">
+					<mat-card-title>{{cat.name}}</mat-card-title>
+				</div>	
+			</mat-card-header>
+		</div>
+	</mat-card>
+</div>

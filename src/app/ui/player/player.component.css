@@ -1,0 +1,22 @@
+.player{
+  color: white;
+  margin-top: 60px;
+  background-color: #454041;
+   position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.song_details{
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+button{
+  position: absolute;
+  top: 25px;
+  background-color: #1DB954;
+  color: white;
+}

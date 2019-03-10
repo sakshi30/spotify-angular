@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+body{
+	margin: 0px auto;
+	background-image: url("./assets/back_img.jpg");
+	color: white;
+	background-repeat: repeat; /* Do not repeat the image */
+  	background-size: cover;
+  	height: 1500px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}

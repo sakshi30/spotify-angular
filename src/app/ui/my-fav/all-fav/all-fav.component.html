@@ -1,0 +1,31 @@
+<br/><br/>
+<h1 class="top_music container"><b>My Favourite Albums</b></h1>
+	 <div class="container-fluid" *ngIf="liked_albums">
+	 	<div class="row">
+		<mat-card *ngFor="let like of liked_albums">
+			<a (click)="getPlaylistOfAlbum(like.id, like.images[1].url)" routerLink="./player"><span class="roll"></span><img mat-card-image src="{{like.images[0].url}}" alt="Slow connection"></a>
+			<div class="row">
+				<mat-card-header>
+					<div class="column">
+						<mat-card-title>{{like.name}}</mat-card-title>
+					</div>	
+				</mat-card-header>
+			</div>
+		</mat-card>
+	</div>
+	</div>
+<h1 class="top_music container"><b>My Favourite Tracks</b></h1>
+	 <div class="container-fluid" *ngIf="liked_tracks">
+	 	<div class="row">
+		<mat-card *ngFor="let like of liked_tracks">
+			<a (click)="Play_song(like.href)"><span class="roll"></span><img mat-card-image src="{{like.album.images[0].url}}" alt="Slow connection"></a>
+			<div class="row">
+				<mat-card-header>
+					<div class="column">
+						<mat-card-title>{{like.name}}</mat-card-title>
+					</div>	
+				</mat-card-header>
+			</div>
+		</mat-card>
+	</div>
+	</div>

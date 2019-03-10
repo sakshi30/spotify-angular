@@ -1,0 +1,37 @@
+<div class="player container-fluid">
+	<div class="row" *ngIf="songName">
+		<div class="col-lg-5 col-md-4 col-sm-4">
+			<div class="song_details">
+				<div class="row">
+					<div class="col-lg-3 col-md-2 col-sm-2">
+						<img src="{{img}}" alt="Slow connection">
+					</div>
+					<span>&nbsp;&nbsp;&nbsp;</span>
+					<div class="col-lg-8 col-md-2 col-sm-2">
+						<h5 class="song_name">{{songName}}</h5>
+						<p>{{artist}}</p>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-7 col-md-8 col-sm-8">
+			<div class="row">
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<a href="{{uri}}" target="_blank"><button mat-raised-button><i class="fa fa-play"></i></button></a>
+			</div>
+		</div>
+		<br/><br/><br/><br/>
+	</div>
+	<div class="row" *ngIf="!songName">
+		<div class="col-lg-5 col-md-4 col-sm-3">
+			<div class="song_details">
+				<div class="row">
+					<h5 class="song_name container">No Track is playing currently</h5>
+				
+				</div>
+			</div>
+		</div>
+		<br/><br/><br/><br/>
+	</div>
+</div>
